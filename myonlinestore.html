@@ -8,11 +8,52 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
+  
+  .dropbtn {
+    background-color:#333;
+    color: white;
+    padding: 15px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+  }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+	z-index:3;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: inline-block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: rgb(27, 20, 35);
+}
 
     /* Remove the navbar's default rounded borders and increase the bottom margin */ 
     .navbar {
       margin-bottom: 50px;
       border-radius: 0;
+	  background-color:#333;
     }
     
     /* Remove the jumbotron's default bottom margin */ 
@@ -49,18 +90,50 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Deals</a></li>
-        <li><a href="#">Stores</a></li>
+        <li><div class ="dropdown">
+		<button class="dropbtn" href="#">Products</button>
+		<div class="dropdown-content">
+		<a href ="#">Electronics</a>
+		<a href="#">clothes</a>
+		<a href="#">shoes</a>
+		</div>
+		</div>
+		</li>
+        <li><div class ="dropdown">
+		<button class="dropbtn" href="#">Deals</a>
+		<div class="dropdown-content">
+		<a href ="#">30% OFF</a>
+		<a href="#">60% OFF</a>
+		<a href="#">80% OFF</a>
+		</div>
+		</div>
+		</li>
+        <li><div class ="dropdown">
+		<button class="dropbtn" href="#">Stores</button>
+		<div class="dropdown-content">
+		<a href ="#">Brands</a>
+		<a href="#">Location</a>
+		</div>
+		</div>
+		</li>
         <li><a href="#">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+        <li><div class ="dropdown">
+		<button class="dropbtn" href="#">Your Account</button>
+		<div class="dropdown-content">
+		<a href ="#">Log In</a>
+		<a href="#">Sign up</a>
+		
+		
+		</div>
+		</li>
         <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
       </ul>
     </div>
   </div>
 </nav>
+
 
 <div class="container">
 
@@ -188,8 +261,8 @@
 <footer class="container-fluid text-center">
   <p>Online Store Copyright</p>  
   <form class="form-inline">Get deals:
-    <input type="email" class="form-control" size="50" placeholder="Email Address">
-    <button type="button" class="btn btn-danger">Sign Up</button>
+    <input type="email" class="form-control" size="50" placeholder="Email Address" >
+    <button type="button" class="btn btn-danger" href="https://www.google.com/gmail/">Sign Up</button>
   </form>
 </footer>
 
